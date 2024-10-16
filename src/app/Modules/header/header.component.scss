@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  width: 100vw;
+  font-family: Mosvita-SemiBold-Expanded;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 32.448vw;
+    height: 49px;
+    border-radius: 15px;
+    color: white;
+    background-color: #302c2c;
+    .routerLinks {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}

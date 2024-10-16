@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Mosvita-Regular;
+}
+body {
+  overflow: overlay;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+@font-face {
+  font-family: Mosvita;
+  src: url(./assets/fonts/Mosvita-BlackExpanded.otf);
+}
+@font-face {
+  font-family: Mosvita-SemiBold-Expanded;
+  src: url(./assets/fonts/Mosvita-SemiBoldExpanded.otf);
+}
+@font-face {
+  font-family: Mosvita-Expanded;
+  src: url(./assets/fonts/Mosvita-Expanded.otf);
+}
+@font-face {
+  font-family: Mosvita-Regular;
+  src: url(./assets/fonts/Mosvita-Regular.otf);
+}
