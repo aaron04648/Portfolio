@@ -41,22 +41,16 @@
         color: #ff0000;
       }
       #Nike {
-        max-height: 158px;
-        font-family: Mosvita;
-        line-height: 158px;
+        margin-right: 15px;
         font: normal normal 900 158px/135px Mosvita;
-
-        justify-self: flex-end;
+        text-align: right;
       }
       #Roten {
-        max-height: 280px;
-        font-family: Mosvita;
-        line-height: 280px;
+        margin-left: -15px;
         font: normal normal 900 280px/204px Mosvita;
       }
       #Portfolio {
-        max-height: 100px;
-        line-height: 100px;
+        margin-left: -7px;
         font: normal normal normal 100px/86px Mosvita-Expanded;
       }
     }
