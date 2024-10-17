@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './Pages/homepage/homepage.component';
-import { AboutMeComponent } from './Pages/about-me/about-me.component';
-import { MyWorksComponent } from './Pages/my-works/my-works.component';
 import { FooterComponent } from './Modules/footer/footer.component';
 import { HeaderComponent } from './Modules/header/header.component';
+import { AboutMeComponent } from './Pages/about-me/about-me.component';
+import { HomepageComponent } from './Pages/homepage/homepage.component';
+import { MyWorksComponent } from './Pages/my-works/my-works.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,15 @@ import { HeaderComponent } from './Modules/header/header.component';
     AboutMeComponent,
     MyWorksComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //Materials
+    MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -28,6 +28,10 @@ body {
   src: url(./assets/fonts/Mosvita-SemiBoldExpanded.otf);
 }
 @font-face {
+  font-family: Mosvita-SemiBold;
+  src: url(./assets/fonts/Mosvita-SemiBold.otf);
+}
+@font-face {
   font-family: Mosvita-Expanded;
   src: url(./assets/fonts/Mosvita-Expanded.otf);
 }
@@ -35,3 +39,10 @@ body {
   font-family: Mosvita-Regular;
   src: url(./assets/fonts/Mosvita-Regular.otf);
 }
+@font-face {
+  font-family: Mosvita-Medium;
+  src: url(./assets/fonts/Mosvita-Medium.otf);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
