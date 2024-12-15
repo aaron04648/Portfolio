@@ -1,0 +1,30 @@
+.layout1 {
+    display: grid;
+    padding: 16px;
+    grid-template-columns: 30% 20% 50%;
+    gap: 16px;
+    .left {
+      display: grid;
+      height: 915px;
+      grid-template-rows: 50% 50%;
+      gap: 16px;
+    }
+    .middle {
+      display: grid;
+      height: 915px;
+      grid-template-rows: 30% 30% 38%;
+      gap: 16px;
+    }
+    .right {
+      display: grid;
+      height: 931px;
+      grid-template-rows: 100%;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+  }

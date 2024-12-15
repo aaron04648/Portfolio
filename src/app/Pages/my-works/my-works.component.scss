@@ -1,7 +1,6 @@
 .wrapper {
   background-color: #600000;
   .all-works-container {
-    height: 100vh;
     padding: 234px 100px;
     border-radius: 0 0 200px 0;
     background-color: #343434;
@@ -10,37 +9,75 @@
       gap: 34px;
       button {
         width: 185px;
-        height: 41px;
-
-        border: 4px solid #ff0000;
-        border-radius: 0 24px 24px 24px;
-        color: white;
-        background-color: transparent;
-        font-family: Mosvita-SemiBold-Expanded;
-        font-size: 20px;
-      }
-      button:hover {
-        background-color: #ff0000;
       }
     }
     .works-container {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 60px;
       button {
         width: 538px;
-        height: 41px;
         margin-top: 144px;
-        border: 4px solid #ff0000;
-        border-radius: 0 24px 24px 24px;
-        color: white;
-        background-color: transparent;
-        font-family: Mosvita-SemiBold-Expanded;
-        font-size: 20px;
-      }
-      button:hover {
-        background-color: #ff0000;
       }
     }
+  }
+  .neo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 140px 100px 100px;
+    h1 {
+      margin-bottom: 50px;
+      color: #ff0000;
+      font-family: Mosvita-SemiBold-Expanded;
+      font-size: 100px;
+      font-weight: 900;
+    }
+    h2 {
+      margin-bottom: 30vh;
+      color: white;
+      font-family: Mosvita-Regular;
+      font-size: 50px;
+      letter-spacing: 1.25px;
+    }
+    .neo-information {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      .information {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 380px;
+        padding: 60px;
+        margin-top: 50px;
+        border-radius: 0 0 0 75px;
+        background-color: #460101;
+        box-sizing: content-box;
+        .title {
+          padding-bottom: 14px;
+          color: white;
+          font-size: 30px;
+          white-space: nowrap;
+        }
+        .text {
+          color: white;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  button {
+    height: 41px;
+    border: 4px solid #ff0000;
+    border-radius: 0 24px 24px 24px;
+    color: white;
+    background-color: transparent;
+    font-family: Mosvita-SemiBold-Expanded;
+    font-size: 20px;
+  }
+  button:hover {
+    background-color: #ff0000;
   }
 }

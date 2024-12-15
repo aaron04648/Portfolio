@@ -1,12 +1,77 @@
 <div class="wrapper">
   <div class="all-works-container">
     <div class="button-container">
-      <button>print</button><button>digital</button><button>draws</button>
+      <button (click)="layout = 'print'">print</button
+      ><button (click)="layout = 'digital'">digital</button
+      ><button (click)="layout = 'draws'">draws</button>
     </div>
     <div class="works-container">
-      <div class="inner-container"></div>
-      <button>+ mehr</button>
+      <div *ngIf="layout == 'print'" class="print-container">
+        <app-layout1></app-layout1>
+
+        <div
+          *ngIf="layout == 'print' && expandContainer"
+          class="print-hidden-container"
+        >
+          <app-layout2></app-layout2>
+          <app-layout3></app-layout3>
+          <app-layout4></app-layout4>
+          <app-layout5></app-layout5>
+        </div>
+      </div>
+
+      <div *ngIf="layout == 'digital'" class="digital-container container">
+        <app-layout3></app-layout3>
+
+        <div
+          *ngIf="layout == 'digital' && expandContainer"
+          class="print-hidden-container"
+        >
+          <app-layout2></app-layout2>
+          <app-layout1></app-layout1>
+          <app-layout4></app-layout4>
+          <app-layout5></app-layout5>
+        </div>
+      </div>
+
+      <div *ngIf="layout == 'draws'" class="draws-container container">
+        <div class="print-shown-container shown-container">
+          <div class="left-container">draws</div>
+          <div class="mid-container"></div>
+          <div class="right-container"></div>
+        </div>
+
+        <div class="print-hidden-container">
+          <div class="left-container"></div>
+          <div class="mid-container"></div>
+          <div class="right-container"></div>
+        </div>
+      </div>
+      <button (click)="showFullContainer()">
+        <span *ngIf="!expandContainer">+ mehr</span
+        ><span *ngIf="expandContainer">- weniger</span>
+      </button>
     </div>
   </div>
+  <div class="neo">
+    <h1>INFORMATION</h1>
+    <h2>ZU DEN WICHTIGSTEN ARBEITEN</h2>
+    <div class="neo-information">
+      <div class="information">
+        <p class="title">Neo - Die sozialliberale Mitte</p>
+        <p class="text">
+          Eine grosse Partei aus dem Wallis hat nach 40 Jahren ihren Namen von
+          CSP zu NEO geändert. Ich hatte die Gelegenheit, aktiv am gesamten
+          Kreativprozess mitzuhelfen – von der Namensfindung bis zur Gestaltung
+          der grundlegenden Basis-Kommunikationsmittel. Bei den darauffolgenden
+          Kampagnen, den Nationalratswahlen im Wallis und den Gemeinderatswahlen
+          in Visp, übernahm ich die Verantwortung für die Gestaltung und
+          Umsetzung sämtlicher Werbemassnahmen.
+        </p>
+      </div>
+      <app-layout-extra-info> </app-layout-extra-info>
+    </div>
+  </div>
+
   <app-footer></app-footer>
 </div>
