@@ -22,12 +22,12 @@
       }
     }
   }
-  .neo {
+  .important-information-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px 140px 100px 100px;
     h1 {
+      margin-top: 30vh;
       margin-bottom: 50px;
       color: #ff0000;
       font-family: Mosvita-SemiBold-Expanded;
@@ -35,36 +35,11 @@
       font-weight: 900;
     }
     h2 {
-      margin-bottom: 30vh;
+      margin-bottom: 10vh;
       color: white;
       font-family: Mosvita-Regular;
       font-size: 50px;
       letter-spacing: 1.25px;
-    }
-    .neo-information {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      .information {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 380px;
-        padding: 60px;
-        margin-top: 50px;
-        border-radius: 0 0 0 75px;
-        background-color: #460101;
-        box-sizing: content-box;
-        .title {
-          padding-bottom: 14px;
-          color: white;
-          font-size: 30px;
-          white-space: nowrap;
-        }
-        .text {
-          color: white;
-          font-size: 18px;
-        }
-      }
     }
   }
 

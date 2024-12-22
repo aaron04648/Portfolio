@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-layout1',
   templateUrl: './layout1.component.html',
-  styleUrls: ['./layout1.component.scss']
+  styleUrls: ['./layout1.component.scss'],
 })
 export class Layout1Component {
-
+  @Input() imageSources: string[] = [];
 }

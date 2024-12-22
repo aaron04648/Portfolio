@@ -16,6 +16,7 @@ import { Layout3Component } from './Pages/my-works/layout3/layout3.component';
 import { Layout4Component } from './Pages/my-works/layout4/layout4.component';
 import { Layout5Component } from './Pages/my-works/layout5/layout5.component';
 import { LayoutExtraInfoComponent } from './Pages/my-works/layout-extra-info/layout-extra-info.component';
+import { ContactComponent } from './Pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LayoutExtraInfoComponent } from './Pages/my-works/layout-extra-info/lay
     Layout4Component,
     Layout5Component,
     LayoutExtraInfoComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
