@@ -1,0 +1,111 @@
+.wrapper {
+  height: 100vh;
+  padding: 163px 0 70px 140px;
+  border-radius: 200px 0 0 0;
+  background-color: #505050;
+  .footer-title {
+    color: white;
+    font-family: Mosvita;
+    font-size: 50px;
+  }
+  .container-reference {
+    display: flex;
+    gap: 37px;
+  }
+  .reference {
+    display: flex;
+    align-items: center;
+    width: 522px;
+    margin-top: 20px;
+    .reference-information {
+      display: grid;
+
+      min-width: 450px;
+      height: 191px;
+      padding: 25px;
+      border-radius: 25px;
+      background-color: #343434;
+      z-index: 0;
+      box-sizing: border-box;
+      grid-template-rows: 42px 25px 47px;
+      .information-name {
+        color: white;
+        font-family: Mosvita-SemiBold;
+        font-size: 30px;
+        .lastname {
+          color: #ff0000;
+        }
+      }
+      .description {
+        color: white;
+        font-family: Mosvita-Regular;
+        font-size: 18px;
+      }
+      .reference-contact {
+        display: flex;
+        margin-top: 17px;
+        color: white;
+        gap: 25px;
+        .contacts {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 47px;
+          height: 47px;
+          border: solid #ff0000 2px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .picture-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      right: 169px;
+
+      min-width: 241px;
+      height: 241px;
+      border-radius: 50%;
+      background-color: #343434;
+      z-index: 1;
+      box-sizing: border-box;
+      img {
+        width: 214px;
+        height: 214px;
+        border-radius: 50%;
+        object-fit: fill;
+      }
+    }
+  }
+  .container-contact {
+    margin-top: 154px;
+    .reference-information {
+      min-width: 529px;
+    }
+    .picture-container {
+      right: 110.5px;
+    }
+  }
+}
+.footer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 40px;
+  padding: 8px 140px 8px 140px;
+  color: white;
+  background-color: #600000;
+  font-family: Mosvita-Regular;
+  font-size: 18px;
+  box-sizing: border-box;
+  .name {
+    color: #ff0000;
+    font-family: Mosvita;
+  }
+  .footer-routerLinks {
+    display: flex;
+    gap: 100px;
+  }
+}

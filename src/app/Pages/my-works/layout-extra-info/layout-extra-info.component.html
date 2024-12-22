@@ -1,0 +1,20 @@
+<div class="informations-container" [style.background-color]="bgColor[0]">
+  <div class="informations" [ngClass]="{ reversed: reversed }">
+    <div class="information" [style.background-color]="bgColor[1]">
+      <p class="title">{{ title }}</p>
+      <p class="text">
+        {{ text }}
+      </p>
+    </div>
+    <div class="layout">
+      <div class="top">
+        <img [src]="imageSources[0]" alt="drinkcard mascotte" />
+      </div>
+      <div class="bottom">
+        <img [src]="imageSources[1]" alt="mascotte 1" />
+        <img [src]="imageSources[2]" alt="mascotte 1" />
+        <img [src]="imageSources[3]" alt="mascotte 1" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+<div class="wrapper">
+  <div class="technologies">
+    <div class="technology-carousel">
+      <button (click)="getPrev()">Prev</button>
+      <div class="carousel-inner" role="listbox">
+        <img
+          [@moveLeftToMiddle]="i === 0 ? 'middle' : 'left'"
+          [src]="slides[i === 0 ? this.slides.length - 1 : i - 1]"
+          alt="slide"
+        />
+        <img
+          [@moveCenterToRight]="i === 1 ? 'middle' : 'right'"
+          [src]="slides[i]"
+          alt="slide"
+        />
+        <img
+          [@moveRightToLeft]="i === 2 ? 'middle' : 'right'"
+          [src]="slides[(i + 1) % this.slides.length]"
+          alt="slide"
+        />
+      </div>
+      <button (click)="getNext()">Next</button>
+    </div>
+    <div class="information">
+      <p>ÜBER</p>
+      <p class="information-highlighted"><span>95</span> Projekte</p>
+      <p>BEARBEITET</p>
+    </div>
+  </div>
+  <div class="skills">
+    <div class="skill">
+      <p class="title">Skills</p>
+      <p>
+        Ich hatte das grosse Glück, meine Lehre als Interactive Media Designer
+        bei Tonic, einer kleinen Full-Service-Agentur im Wallis, absolvieren zu
+        dürfen. Tonic bietet ihren Kunden ein breites Leistungsspektrum, das von
+        Illustrationen und der Entwicklung ganzheitlicher Erscheinungsbilder bis
+        zur Gestaltung von Prospekten, Jahresberichten, Websites und einfachen
+        Animationen für digitale Werbemittel reicht. Auch innovative
+        Guerilla-Marketing-Aktionen werden von Tonic inhouse realisiert, was mir
+        die Möglichkeit gab, vielfältige Erfahrungen zu sammeln und mein Wissen
+        nicht nur im Bereich der Interaktion, sondern auch im Print- und
+        Grafikdesign zu vertiefen.
+      </p>
+      <p>
+        Diese umfassende Arbeitsweise hat meine Kreativität gefördert und mir
+        einen ganzheitlichen Blick auf Kommunikationslösungen ermöglicht.
+      </p>
+      <p>
+        Nebenbei bemerkt: Die Agentur wird von meinem Vater geführt. Wer jedoch
+        denkt, dass das meine Lehre einfacher gemacht hat, kennt meinen Vater
+        nicht:)
+      </p>
+    </div>
+    <div class="job">
+      <p class="title">INTERACTIVE MEDIA DESIGNER</p>
+      <p>
+        Meine vierjährige Lehre als Interactive Media Designer habe ich
+        erfolgreich an der Schule für Gestaltung in Bern abgeschlossen. Im
+        Betrieb konnte ich das erlernte Wissen direkt in realen Projekten
+        anwenden. Dazu gehörten die Gestaltung und Umsetzung von Websites,
+        Online-Shops sowie animierten und statischen Werbebannern in
+        verschiedensten Formaten.
+      </p>
+      <p>
+        Dank der überbetrieblichen Kurse und kleineren Agenturaufträgen hatte
+        ich zudem die Möglichkeit, tiefere Einblicke in die Fotografie,
+        Filmproduktion und Drohnenaufnahmen zu gewinnen. Dabei arbeitete ich
+        teils eigenständig, teils unterstützend an der Seite unseres Fotografen.
+      </p>
+    </div>
+  </div>
+  <div class="costumer-impressions">
+    <p>CUSTOMER IMPRESSION</p>
+    <div class="customer-carousel">
+      <app-customer-layout
+        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
+        [text]="
+          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
+        "
+        [personInformation]="[
+          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
+        ]"
+      ></app-customer-layout>
+      <app-customer-layout
+        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
+        [text]="
+          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
+        "
+        [personInformation]="[
+          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
+        ]"
+      ></app-customer-layout>
+
+      <app-customer-layout
+        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
+        [text]="
+          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
+        "
+        [personInformation]="[
+          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
+        ]"
+      ></app-customer-layout>
+      <app-customer-layout
+        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
+        [text]="
+          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
+        "
+        [personInformation]="[
+          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
+        ]"
+      ></app-customer-layout>
+    </div>
+  </div>
+  <div class="aboutMe">
+    <p class="title">ÜBER MICH</p>
+
+    <div class="image-carousel">
+      <img src="../../../assets/img/nike_roten.jpg" alt="" /><img
+        src="../../../assets/img/nike_roten.jpg"
+        alt=""
+      /><img src="../../../assets/img/nike_roten.jpg" alt="" /><img
+        src="../../../assets/img/nike_roten.jpg"
+        alt=""
+      /><img src="../../../assets/img/nike_roten.jpg" alt="" />
+    </div>
+    <div class="aboutNike">
+      <p>
+        Vom Fussballplatz bis zur Leinwand – ich lebe meine Kreativität in
+        vollen Zügen aus. Während meiner Lehre bei Tonic habe ich nicht nur
+        handwerkliches Können entwickelt, sondern auch gelernt, wie wichtig es
+        ist, seiner Leidenschaft zu folgen. Genau das habe ich getan: Die
+        Kunstschule SFGB Bern hat mir den Weg geebnet, meine Liebe zur Kunst
+        weiter zu vertiefen. Graffiti ist für mich mehr als nur Farbe auf Wände
+        zu sprühen – es ist Ausdruck und Freiheit.
+      </p>
+      <p>
+        In meiner Freizeit bin ich auch auf dem Eishockeyfeld oder beim Fussball
+        zu finden. Immer mit einem Augenzwinkern und einem Lächeln, denn ich
+        habe es gerne lustig und geniesse das Leben in vollen Zügen. Und wenn
+        ich mich anziehe, spiegelt sich meine Liebe zu den 90ern wider: Ob
+        Baggy-Jeans oder Retro-Shirts, die Ära ist für mich mehr als nur ein
+        Trend. Auch musikalisch schlägt mein Herz im Takt der 90er – von Hip-Hop
+        bis Grunge, die Beats sind zeitlos und authentisch, genau wie ich.
+      </p>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
