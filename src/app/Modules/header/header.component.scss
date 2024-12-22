@@ -1,10 +1,13 @@
 .wrapper {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  align-items: center;
   position: absolute;
   top: 50px;
   width: 100vw;
+  margin-left: 140px;
   font-family: Mosvita-SemiBold-Expanded;
+  z-index: 1000;
+  grid-template-columns: auto auto auto;
   .container {
     display: flex;
     justify-content: space-evenly;
@@ -19,5 +22,14 @@
       font-size: 20px;
       cursor: pointer;
     }
+    .routerLinks:hover {
+      color: red;
+    }
+  }
+  img {
+    position: relative;
+    left: 0;
+    width: 122px;
+    height: 67px;
   }
 }

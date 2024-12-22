@@ -1,12 +1,186 @@
 <div class="wrapper">
   <div class="all-works-container">
     <div class="button-container">
-      <button>print</button><button>digital</button><button>draws</button>
+      <button (click)="layout = 'print'">print</button
+      ><button (click)="layout = 'digital'">digital</button
+      ><button (click)="layout = 'draws'">draws</button>
     </div>
     <div class="works-container">
-      <div class="inner-container"></div>
-      <button>+ mehr</button>
+      <div *ngIf="layout == 'print'" class="print-container">
+        <app-layout1
+          [imageSources]="[
+            '../../../assets/img/prints/flyer_mascotte_1.jpg',
+            '../../../assets/img/prints/f12_ehc.jpg',
+            '../../../assets/img/prints/drinkcard_mascotte.jpg',
+            '../../../assets/img/prints/magazin_ehc.jpg',
+            '../../../assets/img/prints/flyer_ganterbratscher.jpg',
+            '../../../assets/img/prints/f200_neo.jpg'
+          ]"
+        ></app-layout1>
+
+        <div
+          *ngIf="layout == 'print' && expandContainer"
+          class="print-hidden-container"
+        >
+          <app-layout2
+            [imageSources]="[
+              '../../../assets/img/prints/rollup_sodalis.jpg',
+              '../../../assets/img/prints/flyer_neo.jpg'
+            ]"
+          ></app-layout2>
+          <app-layout3
+            [imageSources]="[
+              '../../../assets/img/prints/flyer_mascotte_2.jpg',
+              '../../../assets/img/prints/flyer_rosswaldstube.jpg',
+              '../../../assets/img/prints/VK_pfammatter.jpg',
+              '../../../assets/img/prints/flyer_bikepass.jpg',
+              '../../../assets/img/prints/f12_mascotte.jpg'
+            ]"
+          ></app-layout3>
+          <app-layout4
+            [imageSources]="[
+              '../../../assets/img/prints/Logo_HLO.svg',
+              '../../../assets/img/prints/Logo_Mountain.svg',
+              '../../../assets/img/prints/flyer_lauber.jpg'
+            ]"
+          ></app-layout4>
+          <app-layout5
+            [imageSources]="['../../../assets/img/prints/car_pfammatter.jpg']"
+          ></app-layout5>
+        </div>
+      </div>
+
+      <div *ngIf="layout == 'digital'" class="digital-container container">
+        <app-layout3
+          [imageSources]="[
+            '../../../assets/img/prints/flyer_mascotte_2.jpg',
+            '../../../assets/img/prints/flyer_rosswaldstube.jpg',
+            '../../../assets/img/prints/VK_pfammatter.jpg',
+            '../../../assets/img/prints/flyer_bikepass.jpg',
+            '../../../assets/img/prints/f12_mascotte.jpg'
+          ]"
+        ></app-layout3>
+
+        <div
+          *ngIf="layout == 'digital' && expandContainer"
+          class="print-hidden-container"
+        >
+          <app-layout2
+            [imageSources]="[
+              '../../../assets/img/prints/rollup_sodalis.jpg',
+              '../../../assets/img/prints/flyer_neo.jpg'
+            ]"
+          ></app-layout2>
+          <app-layout1
+            [imageSources]="[
+              '../../../assets/img/prints/flyer_mascotte_1.jpg',
+              '../../../assets/img/prints/f12_ehc.jpg',
+              '../../../assets/img/prints/drinkcard_mascotte.jpg',
+              '../../../assets/img/prints/magazin_ehc.jpg',
+              '../../../assets/img/prints/flyer_ganterbratscher.jpg',
+              '../../../assets/img/prints/f200_neo.jpg'
+            ]"
+          ></app-layout1>
+          <app-layout4
+            [imageSources]="[
+              '../../../assets/img/prints/Logo_HLO.svg',
+              '../../../assets/img/prints/Logo_Mountain.svg',
+              '../../../assets/img/prints/flyer_lauber.jpg'
+            ]"
+          ></app-layout4>
+          <app-layout5
+            [imageSources]="['../../../assets/img/prints/car_pfammatter.jpg']"
+          ></app-layout5>
+        </div>
+      </div>
+
+      <div *ngIf="layout == 'draws'" class="draws-container container">
+        <p>soon</p>
+      </div>
+      <button (click)="showFullContainer()">
+        <span *ngIf="!expandContainer">+ mehr</span
+        ><span *ngIf="expandContainer">- weniger</span>
+      </button>
     </div>
   </div>
+  <div>
+    <div class="important-information-container">
+      <h1>INFORMATION</h1>
+      <h2>ZU DEN WICHTIGSTEN ARBEITEN</h2>
+      <app-layout-extra-info
+        [imageSources]="[
+          '../../../assets/img/prints/f200_neo.jpg',
+          '../../../assets/img/prints/flyer_neo.jpg',
+          '../../../assets/img/prints/f12_neo.jpg',
+          '../../../assets/img/prints/f12_neo.jpg'
+        ]"
+        [text]="
+          'Eine grosse Partei aus dem Wallis hat nach 40 Jahren ihren Namen von CSP zu NEO geändert. Ich hatte die Gelegenheit, aktiv am gesamten Kreativprozess mitzuhelfen – von der Namensfindung bis zur Gestaltung der grundlegenden Basis-Kommunikationsmittel. Bei den darauffolgenden Kampagnen, den Nationalratswahlen im Wallis und den Gemeinderatswahlen in Visp, übernahm ich die Verantwortung für die Gestaltung und Umsetzung sämtlicher Werbemassnahmen.'
+        "
+        [title]="'Neo - Die sozialliberale Mitte'"
+      >
+      </app-layout-extra-info>
+
+      <app-layout-extra-info
+        [imageSources]="[
+          '../../../assets/img/prints/magazin_ehc.jpg',
+          '../../../assets/img/prints/f12_ehc.jpg',
+          '../../../assets/img/prints/f12_ehc.jpg',
+          '../../../assets/img/prints/f12_ehc.jpg'
+        ]"
+        [text]="
+          'Für meine IPA (Abschlussarbeit) habe ich mich entschieden, ein Redesign der Website des EHC Visp mit besonderem Fokus auf den Online-Shop zu gestalten. Der neue Markenauftritt des EHC Visp wurde von Tonic ein halbes Jahr zuvor realisiert. Als Orientierung diente mir ein vorgegebenes Moodboard, dass die Stimmung des zukünftigen Designs widerspiegelte. Seit dem Umzug in die Lonza Arena ist der Werbe- und Kommunikationsstil des EHC Visp stark digital geprägt. In den letzten Jahren habe ich zahlreiche Animationen für Sponsoren und eigene Kommunikationsmittel des EHC Visp erstellt, geplant und wurden einem grossen Publikum präsentiert.'
+        "
+        [title]="'EHC Visp'"
+        [bgColor]="['#460101', '#600000']"
+        [reversed]="true"
+      >
+      </app-layout-extra-info>
+      <app-layout-extra-info
+        [imageSources]="[
+          '../../../assets/img/prints/flyer_mascotte_2.jpg',
+          '../../../assets/img/prints/f12_mascotte.jpg',
+          '../../../assets/img/prints/flyer_mascotte_3.jpg',
+          '../../../assets/img/prints/drinkcard_mascotte.jpg'
+        ]"
+        [text]="
+          'Das Mascotte in Grächen, eine Discothek für junge Menschen, benötigte über die letzten Jahre regelmässig neue Eventplakate und Anzeigen. Meine Aufgabe bestand darin, die Anforderungen des Kunden schnell und effizient umzusetzen. Als direkter Ansprechpartner betreute ich den Kunden mehrere Jahre eigenständig.'
+        "
+        [title]="'Mascotte'"
+        [reversed]="false"
+      >
+      </app-layout-extra-info>
+      <app-layout-extra-info
+        [imageSources]="[
+          '../../../assets/img/prints/magazin_ehc.jpg',
+          '../../../assets/img/prints/f12_ehc.jpg',
+          '../../../assets/img/prints/f12_ehc.jpg',
+          '../../../assets/img/prints/f12_ehc.jpg'
+        ]"
+        [text]="
+          'Bei diesem Kunden war ich vor allem für Animationen in Firmenpräsentationen und Werbeanzeigen zuständig. Besonders die spezielle Logo-Animation stellte immer wieder eine Herausforderung dar. Gelegentlich wurden auch Animationen für Kampagnen in den sozialen Medien benötigt.'
+        "
+        [title]="'Lauber IWISA'"
+        [bgColor]="['#460101', '#600000']"
+        [reversed]="true"
+      >
+      </app-layout-extra-info>
+      <app-layout-extra-info
+        [imageSources]="[
+          '../../../assets/img/prints/VK_pfammatter.jpg',
+          '../../../assets/img/prints/flyer_pfammatter.jpg',
+          '../../../assets/img/prints/car_pfammatter.jpg',
+          '../../../assets/img/prints/f12_ehc.jpg'
+        ]"
+        [text]="
+          'Für diesen Kunden war ein Rebranding erforderlich. Ich unterstützte das Kreativteam dabei, verschiedene Logovarianten mit zu entwickeln. Anschliessend war ich für die Ausarbeitung der Briefschaften, Fahrzeug- und Firmenbeschriftung sowie dem Webdesign verantwortlich.'
+        "
+        [title]="'Metzgerei Pfammatter'"
+        [reversed]="false"
+      >
+      </app-layout-extra-info>
+    </div>
+  </div>
+
   <app-footer></app-footer>
 </div>
