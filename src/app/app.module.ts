@@ -43,6 +43,7 @@ import { Layout5Component } from './Pages/my-works/layout5/layout5.component';
     BrowserAnimationsModule,
     //Materials
     MatIconModule,
+    //others
   ],
   providers: [],
   bootstrap: [AppComponent],

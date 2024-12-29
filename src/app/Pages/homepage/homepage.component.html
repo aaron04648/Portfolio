@@ -20,11 +20,12 @@
     <div class="works-title">ARBEITEN</div>
     <div class="slider"></div>
     <div class="items-carousel">
-      <div class="work-items">d</div>
-      <div class="work-items">d</div>
-      <div class="work-items">d</div>
-      <div class="work-items">d</div>
-      <div class="work-items">d</div>
+      <img
+        *ngFor="let image of images"
+        [src]="image"
+        alt="Arbeiten"
+        class="work-items"
+      />
     </div>
     <button routerLink="/myWorks">+ mehr</button>
   </div>
