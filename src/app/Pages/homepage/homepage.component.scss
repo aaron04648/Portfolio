@@ -87,6 +87,10 @@
         border-radius: 25px;
         background-color: white;
       }
+      .work-items {
+        display: inline-flex;
+        animation: scrollLeft 80s linear infinite;
+      }
     }
     button {
       width: 538px;
@@ -101,6 +105,14 @@
     }
     button:hover {
       background-color: #ff0000;
+    }
+  }
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1000%);
     }
   }
 }

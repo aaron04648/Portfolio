@@ -1,25 +1,13 @@
 <div class="wrapper">
   <div class="technologies">
     <div class="technology-carousel">
-      <button (click)="getPrev()">Prev</button>
+      <!-- <button (click)="getPrev()">Prev</button> -->
       <div class="carousel-inner" role="listbox">
-        <img
-          [@moveLeftToMiddle]="i === 0 ? 'middle' : 'left'"
-          [src]="slides[i === 0 ? this.slides.length - 1 : i - 1]"
-          alt="slide"
-        />
-        <img
-          [@moveCenterToRight]="i === 1 ? 'middle' : 'right'"
-          [src]="slides[i]"
-          alt="slide"
-        />
-        <img
-          [@moveRightToLeft]="i === 2 ? 'middle' : 'right'"
-          [src]="slides[(i + 1) % this.slides.length]"
-          alt="slide"
-        />
+        <img [src]="'../../../assets/img/others/image-removebg-preview.png'" />
+        <img [src]="'../../../assets/img/others/photoshop.png'" alt="slide" />
+        <img [src]="'../../../assets/img/others/inDesign.png'" alt="slide" />
       </div>
-      <button (click)="getNext()">Next</button>
+      <!-- <button (click)="getNext()">Next</button> -->
     </div>
     <div class="information">
       <p>ÜBER</p>
@@ -74,41 +62,10 @@
     <p>CUSTOMER IMPRESSION</p>
     <div class="customer-carousel">
       <app-customer-layout
-        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
-        [text]="
-          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
-        "
-        [personInformation]="[
-          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
-        ]"
-      ></app-customer-layout>
-      <app-customer-layout
-        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
-        [text]="
-          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
-        "
-        [personInformation]="[
-          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
-        ]"
-      ></app-customer-layout>
-
-      <app-customer-layout
-        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
-        [text]="
-          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
-        "
-        [personInformation]="[
-          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
-        ]"
-      ></app-customer-layout>
-      <app-customer-layout
-        [imageSources]="'../../../assets/img/flavio_schmid.jpg'"
-        [text]="
-          'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.'
-        "
-        [personInformation]="[
-          { name: 'Flavio Schmid', subtitle: 'Präsident der Neo Visp' }
-        ]"
+        *ngFor="let layout of customerLayouts"
+        [imageSources]="layout.imageSource"
+        [text]="layout.text"
+        [personInformation]="[layout.personInformation]"
       ></app-customer-layout>
     </div>
   </div>

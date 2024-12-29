@@ -12,19 +12,10 @@ import { Component } from '@angular/core';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
   animations: [
-    trigger('moveCenterToRight', [
+    trigger('MovePosition', [
       state('middle', style({ transform: 'translateX(0%)', opacity: 1 })),
-      state('right', style({ transform: 'translateX(100%)', opacity: 0.2 })),
-      transition('middle => right', [animate('0.5s ease-in-out')]),
-    ]),
-    trigger('moveLeftToMiddle', [
-      state('left', style({ transform: 'translateX(-100%)', opacity: 0.2 })),
-      state('middle', style({ transform: 'translateX(0%)', opacity: 1 })),
-      transition('left => middle', [animate('0.5s ease-in-out')]),
-    ]),
-    trigger('moveRightToLeft', [
-      state('right', style({ transform: 'translateX(100%)', opacity: 0.2 })),
-      state('left', style({ transform: 'translateX(0%)', opacity: 0.2 })),
+      state('right', style({ transform: 'translateX(-20%)', opacity: 0.2 })),
+      state('left', style({ transform: 'translateX(20%)', opacity: 0.2 })),
       transition('right => left', [animate('0.5s ease-in-out')]),
     ]),
   ],
@@ -32,24 +23,52 @@ import { Component } from '@angular/core';
 export class AboutMeComponent {
   slides: string[];
   i: number;
-
+  customerLayouts = [
+    {
+      imageSource: '../../../assets/img/flavio_schmid.jpg',
+      text: 'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.',
+      personInformation: {
+        name: 'Flavio Schmid',
+        subtitle: 'Präsident der Neo Visp',
+      },
+    },
+    {
+      imageSource: '../../../assets/img/flavio_schmid.jpg',
+      text: 'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.',
+      personInformation: {
+        name: 'Flavio Schmid',
+        subtitle: 'Präsident der Neo Visp',
+      },
+    },
+    {
+      imageSource: '../../../assets/img/flavio_schmid.jpg',
+      text: 'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.',
+      personInformation: {
+        name: 'Flavio Schmid',
+        subtitle: 'Präsident der Neo Visp',
+      },
+    },
+  ];
   constructor() {
+    this.customerLayouts = [...this.customerLayouts, ...this.customerLayouts];
     this.i = 0;
     this.slides = [
-      'https://ep01.epimg.net/elcomidista/imagenes/2022/10/31/articulo/1667206537_604382_1667230832_noticia_normal.jpg',
-      'https://storage.googleapis.com/css-photos/menu-photos/1d2d5a63-1603-473b-9464-e8fa6787f40b.jpeg',
-      'https://ep01.epimg.net/elcomidista/imagenes/2022/01/11/receta/1641893642_902475_1641893828_noticia_normal.jpg',
+      '../../../assets/img/others/image-removebg-preview.png',
+      '../../../assets/img/others/photoshop.png',
+      '../../../assets/img/others/inDesign.png',
     ];
   }
-  getSlide() {
-    return this.slides[this.i];
+  ngOnInit(): void {
+    console.log(this.i);
   }
 
   getPrev() {
     this.i < this.slides.length - 1 ? this.i++ : (this.i = 0);
+    console.log(this.i);
   }
 
   getNext() {
     this.i == 0 ? (this.i = this.slides.length - 1) : this.i--;
+    console.log(this.i);
   }
 }
