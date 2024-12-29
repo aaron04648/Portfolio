@@ -1,0 +1,118 @@
+.wrapper {
+  background-color: #343434;
+  .container-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 99vh;
+
+    padding-top: 100px;
+    padding-left: 140px;
+    background-color: #600000;
+    gap: 0;
+
+    box-sizing: border-box;
+
+    .contactButton {
+      position: absolute;
+      right: 100px;
+      bottom: 100px;
+      width: 185px;
+      height: 48px;
+      border: none;
+      border-radius: 24px 24px 0 24px;
+      color: white;
+      background-color: #ff0000;
+      font-family: Mosvita;
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .container-left {
+      display: grid;
+      width: 40vw;
+      margin-top: 150px;
+      row-gap: 0;
+      grid-template-rows: 150px 230px 80px;
+      .titles {
+        padding: 0;
+        margin: 0;
+        color: #ff0000;
+      }
+      #Nike {
+        margin-right: 15px;
+        font: normal normal 900 158px/135px Mosvita;
+        text-align: right;
+      }
+      #Roten {
+        margin-left: -15px;
+        font: normal normal 900 280px/204px Mosvita;
+      }
+      #Portfolio {
+        margin-left: -7px;
+        font: normal normal normal 100px/86px Mosvita-Expanded;
+      }
+    }
+    .container-right {
+      display: flex;
+      align-items: end;
+      .image-nike {
+        position: relative;
+        right: 100px;
+        width: 1255px;
+        height: 815px;
+      }
+    }
+  }
+  .container-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 110vh;
+    padding-top: 190px;
+    box-sizing: border-box;
+    .works-title {
+      color: white;
+      font-family: Mosvita;
+      font-size: 100px;
+    }
+    .items-carousel {
+      display: flex;
+      gap: 16px;
+      .work-items {
+        width: 526px;
+        height: 327px;
+        margin-top: 50px;
+        border-radius: 25px;
+        background-color: white;
+      }
+      .work-items {
+        display: inline-flex;
+        animation: scrollLeft 80s linear infinite;
+      }
+    }
+    button {
+      width: 538px;
+      height: 41px;
+      margin-top: 144px;
+      border: 4px solid #ff0000;
+      border-radius: 0 24px 24px 24px;
+      color: white;
+      background-color: transparent;
+      font-family: Mosvita-SemiBold-Expanded;
+      font-size: 20px;
+    }
+    button:hover {
+      background-color: #ff0000;
+    }
+  }
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1000%);
+    }
+  }
+}
