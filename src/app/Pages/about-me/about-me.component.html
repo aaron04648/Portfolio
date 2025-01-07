@@ -1,13 +1,9 @@
 <div class="wrapper">
   <div class="technologies">
     <div class="technology-carousel">
-      <!-- <button (click)="getPrev()">Prev</button> -->
-      <div class="carousel-inner" role="listbox">
-        <img [src]="'../../../assets/img/others/image-removebg-preview.png'" />
-        <img [src]="'../../../assets/img/others/photoshop.png'" alt="slide" />
-        <img [src]="'../../../assets/img/others/inDesign.png'" alt="slide" />
-      </div>
-      <!-- <button (click)="getNext()">Next</button> -->
+      <img [src]="'../../../assets/img/others/image-removebg-preview.png'" />
+      <img [src]="'../../../assets/img/others/photoshop.png'" alt="slide" />
+      <img [src]="'../../../assets/img/others/inDesign.png'" alt="slide" />
     </div>
     <div class="information">
       <p>ÜBER</p>
@@ -73,13 +69,12 @@
     <p class="title">ÜBER MICH</p>
 
     <div class="image-carousel">
-      <img src="../../../assets/img/nike_roten.jpg" alt="" /><img
-        src="../../../assets/img/nike_roten.jpg"
-        alt=""
-      /><img src="../../../assets/img/nike_roten.jpg" alt="" /><img
-        src="../../../assets/img/nike_roten.jpg"
-        alt=""
-      /><img src="../../../assets/img/nike_roten.jpg" alt="" />
+      <img
+        *ngFor="let image of nikeImages"
+        [src]="image"
+        alt="Nike"
+        class="nike-items"
+      />
     </div>
     <div class="aboutNike">
       <p>

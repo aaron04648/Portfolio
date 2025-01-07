@@ -33,21 +33,29 @@ export class AboutMeComponent {
       },
     },
     {
-      imageSource: '../../../assets/img/flavio_schmid.jpg',
-      text: 'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.',
+      imageSource: '../../../assets/img/Michael_Salzgeber.jpeg',
+      text: 'Die Zusammenarbeit mit Nike war äusserst angenehm und geprägt von einem konstruktiven Austausch. Gemeinsam konnten wir wertvolle Analysen durchführen, welche zu effektiven Massnahmen zur Verbesserung des Webshops fuhren werden.',
       personInformation: {
-        name: 'Flavio Schmid',
-        subtitle: 'Präsident der Neo Visp',
+        name: 'Michael Salzgeber',
+        subtitle: 'Spielbetrieb und Marketing EHC Visp',
       },
     },
     {
-      imageSource: '../../../assets/img/flavio_schmid.jpg',
-      text: 'Nike Roten ist ein äusserst kompetenter und lösungsorientierter Grafiker, der kreative Herausforderungen mit viel Engagement meistert. Unsere Zusammenarbeit war stets konstruktiv, positiv und führte zu grossartigen Ergebnissen.',
+      imageSource: '../../../assets/img/silvio_burgener.jpg',
+      text: 'Wir durften gemeinsam mit Nike verschiedene grafische Umsetzungen machen. Von der Modernisierung der Stadtpläne, über Kreation von ansprechenden Angebotsflyern, bis hin zur 3D animierten Visualisierung des Projekts Hängebrücke in Brig.',
       personInformation: {
-        name: 'Flavio Schmid',
+        name: 'Direktor/CEO bei Brig-Simplon Tourismus AG',
         subtitle: 'Präsident der Neo Visp',
       },
     },
+  ];
+  nikeImages: string[] = [
+    '../../../assets/img/nike/Bild_1.jpg',
+    '../../../assets/img/nike/Bild_2.jpg',
+    '../../../assets/img/nike/Bild_3.jpg',
+    '../../../assets/img/nike/Bild_4.jpg',
+    '../../../assets/img/nike/Bild_5.jpg',
+    '../../../assets/img/nike/Bild_6.jpg',
   ];
   constructor() {
     this.customerLayouts = [...this.customerLayouts, ...this.customerLayouts];
