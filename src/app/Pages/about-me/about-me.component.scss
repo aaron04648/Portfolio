@@ -10,10 +10,17 @@
     background-color: #343434;
     gap: 48px;
     .technology-carousel {
+      display: flex;
+      align-items: center;
+      gap: 5px;
       img {
         width: 186px;
         height: auto;
-        transition: all 0.5s ease-in-out;
+      }
+      img:first-of-type,
+      img:last-of-type {
+        width: 100px;
+        height: 100px;
       }
     }
     .information {
@@ -133,5 +140,27 @@
         font: normal normal normal 20px/25px Mosvita-Regular;
       }
     }
+  }
+}
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1000%);
+  }
+}
+.image-carousel {
+  display: flex;
+  gap: 1.6vw;
+
+  .nike-items {
+    display: inline-flex;
+    width: 27.917vw;
+    height: 17.031vw;
+    margin-top: 5vw;
+    border-radius: 2.5vw;
+    background-color: white;
+    animation: scrollLeft 80s linear infinite;
   }
 }
