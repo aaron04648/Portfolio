@@ -14,13 +14,27 @@
       align-items: center;
       gap: 5px;
       img {
-        width: 186px;
-        height: auto;
+        width: 5.758vw;
+        height: 5.758vw;
+        transition: transform 1s, opacity 1s;
+        opacity: 0;
       }
-      img:first-of-type,
-      img:last-of-type {
-        width: 100px;
-        height: 100px;
+      img.left {
+        z-index: 1;
+        transform: translateX(-20%);
+        opacity: 0.5;
+      }
+
+      img.center {
+        z-index: 2;
+        transform: translateX(0) scale(1.64);
+        opacity: 1;
+      }
+
+      img.right {
+        z-index: 1;
+        transform: translateX(20%);
+        opacity: 0.5;
       }
     }
     .information {
@@ -95,14 +109,14 @@
     }
     app-customer-layout {
       display: inline-flex;
-      animation: scrollLeft 60s linear infinite;
+      animation: scrollLeft 110s linear infinite;
     }
     @keyframes scrollLeft {
       from {
         transform: translateX(0);
       }
       to {
-        transform: translateX(-550%);
+        transform: translateX(-50%);
       }
     }
   }

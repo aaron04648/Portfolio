@@ -1,28 +1,27 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
-  animations: [
-    trigger('MovePosition', [
-      state('middle', style({ transform: 'translateX(0%)', opacity: 1 })),
-      state('right', style({ transform: 'translateX(-20%)', opacity: 0.2 })),
-      state('left', style({ transform: 'translateX(20%)', opacity: 0.2 })),
-      transition('right => left', [animate('0.5s ease-in-out')]),
-    ]),
-  ],
 })
 export class AboutMeComponent {
-  slides: string[];
-  i: number;
+  visibleImages: string[] = [];
+  positions: string[] = ['left', 'center', 'right'];
+  currentIndex: number = 0;
+  appImages: string[] = [
+    '../../../assets/img/others/indesign.svg',
+    '../../../assets/img/others/illustrator.svg',
+    '../../../assets/img/others/aftereffects.svg',
+    '../../../assets/img/others/photoshop.svg',
+    '../../../assets/img/others/xd.svg',
+    '../../../assets/img/others/google_web_designer.png',
+    '../../../assets/img/others/premierepro.svg',
+    '../../../assets/img/others/lightroom.svg',
+  ];
+
+  appTexts: string[] = ['65', '75', '55', '65', '20', '55', '15', '95'];
+  currentText: string = this.appTexts[0];
   customerLayouts = [
     {
       imageSource: '../../../assets/img/flavio_schmid.jpg',
@@ -44,8 +43,8 @@ export class AboutMeComponent {
       imageSource: '../../../assets/img/silvio_burgener.jpg',
       text: 'Wir durften gemeinsam mit Nike verschiedene grafische Umsetzungen machen. Von der Modernisierung der Stadtpläne, über Kreation von ansprechenden Angebotsflyern, bis hin zur 3D animierten Visualisierung des Projekts Hängebrücke in Brig.',
       personInformation: {
-        name: 'Direktor/CEO bei Brig-Simplon Tourismus AG',
-        subtitle: 'Präsident der Neo Visp',
+        name: 'Silvio Burgener',
+        subtitle: 'Direktor/CEO bei Brig-Simplon Tourismus AG',
       },
     },
   ];
@@ -57,26 +56,33 @@ export class AboutMeComponent {
     '../../../assets/img/nike/Bild_5.jpg',
     '../../../assets/img/nike/Bild_6.jpg',
   ];
-  constructor() {
-    this.customerLayouts = [...this.customerLayouts, ...this.customerLayouts];
-    this.i = 0;
-    this.slides = [
-      '../../../assets/img/others/image-removebg-preview.png',
-      '../../../assets/img/others/photoshop.png',
-      '../../../assets/img/others/inDesign.png',
+  constructor() {}
+  ngOnInit() {
+    this.visibleImages = [
+      this.appImages[0],
+      this.appImages[1],
+      this.appImages[2],
     ];
-  }
-  ngOnInit(): void {
-    console.log(this.i);
-  }
-
-  getPrev() {
-    this.i < this.slides.length - 1 ? this.i++ : (this.i = 0);
-    console.log(this.i);
+    setInterval(() => {
+      this.rotateText();
+      this.rotateImages();
+      console.log(this.visibleImages);
+    }, 5000);
   }
 
-  getNext() {
-    this.i == 0 ? (this.i = this.slides.length - 1) : this.i--;
-    console.log(this.i);
+  rotateImages() {
+    const nextImageIndex = (this.currentIndex + 3) % this.appImages.length;
+    this.visibleImages = [
+      this.visibleImages[1],
+      this.visibleImages[2],
+      this.appImages[nextImageIndex],
+    ];
+
+    // Index erhöhen, um das nächste Bild zu holen
+    this.currentIndex = (this.currentIndex + 1) % this.appImages.length;
+  }
+  rotateText() {
+    this.currentIndex = (this.currentIndex + 1) % this.appTexts.length;
+    this.currentText = this.appTexts[this.currentIndex];
   }
 }

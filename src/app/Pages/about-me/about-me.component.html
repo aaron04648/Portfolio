@@ -1,13 +1,19 @@
 <div class="wrapper">
   <div class="technologies">
     <div class="technology-carousel">
-      <img [src]="'../../../assets/img/others/image-removebg-preview.png'" />
-      <img [src]="'../../../assets/img/others/photoshop.png'" alt="slide" />
-      <img [src]="'../../../assets/img/others/inDesign.png'" alt="slide" />
+      <img
+        *ngFor="let image of visibleImages; let i = index"
+        [src]="image"
+        [class.left]="positions[i] === 'left'"
+        [class.center]="positions[i] === 'center'"
+        [class.right]="positions[i] === 'right'"
+      />
     </div>
     <div class="information">
       <p>ÜBER</p>
-      <p class="information-highlighted"><span>95</span> Projekte</p>
+      <p class="information-highlighted">
+        <span>{{ currentText }}</span> Projekte
+      </p>
       <p>BEARBEITET</p>
     </div>
   </div>

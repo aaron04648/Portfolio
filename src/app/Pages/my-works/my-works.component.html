@@ -1,9 +1,17 @@
 <div class="wrapper">
   <div class="all-works-container">
     <div class="button-container">
-      <button (click)="layout = 'print'">print</button
-      ><button (click)="layout = 'digital'">digital</button
-      ><button (click)="layout = 'draws'">draws</button>
+      <button
+        (click)="layout = 'print'"
+        [style.backgroundColor]="layout === 'print' ? 'red' : ''"
+      >
+        print</button
+      ><button
+        (click)="layout = 'digital'"
+        [style.backgroundColor]="layout === 'digital' ? 'red' : ''"
+      >
+        digital
+      </button>
     </div>
     <div class="works-container">
       <div *ngIf="layout == 'print'" class="print-container">
@@ -94,9 +102,6 @@
         </div>
       </div>
 
-      <div *ngIf="layout == 'draws'" class="draws-container container">
-        <p>soon</p>
-      </div>
       <button (click)="showFullContainer()">
         <span *ngIf="!expandContainer">+ mehr</span
         ><span *ngIf="expandContainer">- weniger</span>

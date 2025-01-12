@@ -14,18 +14,19 @@
     box-sizing: border-box;
 
     .contactButton {
-      position: absolute;
+      position: fixed;
       top: 44.271vw;
       right: 5.208vw;
       bottom: 5vw;
-      width: fit-content;
+      width: 7.551vw;
       height: 2.5vw;
       border: none;
       border-radius: 24px 24px 0 24px;
       color: white;
       background-color: #ff0000;
       font-family: Mosvita;
-      font-size: 1.5vw;
+      font-size: 1.01vw;
+      z-index: 1000;
       white-space: nowrap;
       text-align: center;
       letter-spacing: 0.5px;
@@ -36,7 +37,7 @@
       width: 40vw;
       margin-top: 10vw;
       row-gap: 0;
-      grid-template-rows: auto auto auto;
+      grid-template-rows: 15vw 10vw 10vw;
 
       .titles {
         padding: 0;
@@ -67,8 +68,8 @@
 
       .image-nike {
         position: relative;
-        right: 7vw;
-        width: 70vw;
+        right: -6vw;
+        width: 50vw;
         height: auto;
       }
     }
@@ -114,8 +115,10 @@
       font-family: Mosvita-SemiBold-Expanded;
       font-size: 1.5vw;
     }
+    button:hover {
+      background-color: #ff0000;
+    }
   }
-
   @keyframes scrollLeft {
     from {
       transform: translateX(0);
