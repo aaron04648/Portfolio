@@ -1,0 +1,73 @@
+.wrapper {
+  background-color: #343434;
+
+  .container-angular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5vw;
+    padding-top: 15vw;
+
+    background-color: #600000;
+    box-sizing: border-box;
+    gap: 100px;
+    .angular {
+      display: inline-block;
+      padding: 5px;
+      .angular-title {
+        color: white;
+        font-family: Mosvita;
+        font-size: 5.208vw;
+        box-sizing: border-box;
+      }
+    }
+    .angular-miniproject {
+      display: flex;
+      flex-direction: column;
+      width: 80vw;
+      height: 50vh;
+      border: 5px solid #424242;
+      border-radius: 5px;
+      background-color: #343434;
+      .header {
+        .icon-button {
+          padding: 5px;
+          &:hover {
+            background-color: #424242;
+          }
+        }
+        display: flex;
+        border-bottom: 5px solid #424242;
+      }
+      .project {
+        .moods {
+          display: flex;
+          width: 100%;
+          .moodButton {
+            padding: 5px;
+            margin: 10px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+          }
+          .happy {
+            background-color: #00ff00a1;
+            &:hover {
+              background-color: #28f84ba1;
+            }
+          }
+          .angry {
+            background-color: #fa0303a1;
+          }
+          .sad {
+            background-color: #0330faa1;
+          }
+          .silly {
+            background-color: #fae903a1;
+          }
+        }
+      }
+    }
+  }
+}

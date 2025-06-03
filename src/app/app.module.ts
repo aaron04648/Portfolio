@@ -19,6 +19,7 @@ import { Layout2Component } from './Pages/my-works/layout2/layout2.component';
 import { Layout3Component } from './Pages/my-works/layout3/layout3.component';
 import { Layout4Component } from './Pages/my-works/layout4/layout4.component';
 import { Layout5Component } from './Pages/my-works/layout5/layout5.component';
+import { SkillsComponent } from './Pages/skills/skills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { Layout5Component } from './Pages/my-works/layout5/layout5.component';
     MyWorksComponent,
     FooterComponent,
     HeaderComponent,
-
+    SkillsComponent,
     Layout1Component,
     Layout2Component,
     Layout3Component,
