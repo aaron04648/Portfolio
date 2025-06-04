@@ -1,8 +1,11 @@
+@use './assets/themes/aaron_theme.scss' as theme;
+@use './assets/themes/default_theme.scss' as defaultTheme;
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Mosvita-Regular;
+  
 }
 body {
   overflow: overlay;
@@ -44,5 +47,23 @@ body {
   src: url(./assets/fonts/Mosvita-Medium.otf);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+$base_color: theme.$base_color;
+$base_lighter:theme.$base_lighter;
+$second_color:theme.$second_color;
+
+$font_title1:theme.$font_title1;
+$font_title2:theme.$font_title2;
+$font_title3:theme.$font_title3;
+
+$font_h1_size:defaultTheme.$font_h1_size;
+$font_h1_color:defaultTheme.$font_h1_color;
+$font_h1_family:defaultTheme.$font_h1_family;
+
+$font_big:defaultTheme.$font_big;
+$font_normal:defaultTheme.$font_normal;
+$font_small:defaultTheme.$font_small;
+
+$animation:defaultTheme.$slideshow_animation;
+$start-image: theme.$start-image

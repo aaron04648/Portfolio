@@ -1,3 +1,4 @@
+@use '../../../styles.scss' as theme;
 .wrapper {
   height: 45vw;
   padding: 8.49vw 0 3.646vw 7.292vw;
@@ -19,7 +20,6 @@
     margin-top: 1.042vw;
     .reference-information {
       display: grid;
-
       min-width: 23.438vw;
       height: 9.948vw;
       padding: 1.302vw;
@@ -31,7 +31,7 @@
       .information-name {
         color: white;
         font-family: Mosvita-SemiBold;
-        font-size: 1.563vw;
+        font-size: theme.$font_big;
         .lastname {
           color: #ff0000;
         }
@@ -39,7 +39,7 @@
       .description {
         color: white;
         font-family: Mosvita-Regular;
-        font-size: 0.938vw;
+        font-size: theme.$font_small;
       }
       .reference-contact {
         display: flex;

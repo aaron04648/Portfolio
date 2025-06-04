@@ -1,0 +1,17 @@
+$font_h1_size:5.208vw;
+$font_h1_color:white;
+$font_h1_family:Mosvita;
+$font_big:1.563vw;
+$font_normal:1.01vw;
+$font_small:0.938vw;
+
+
+$slideshow_animation: scrollLeft 80s linear infinite;
+      @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1000%);
+    }
+  }
