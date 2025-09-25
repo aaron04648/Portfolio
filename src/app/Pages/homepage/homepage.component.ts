@@ -30,8 +30,6 @@ export class HomepageComponent {
     this.images = [...this.images, ...this.images];
   }
   ngOnInit(){
-    $http.get('config.json').then(function(response) {
-  $scope.theme = response.data.theme;
-});
+   
   }
 }

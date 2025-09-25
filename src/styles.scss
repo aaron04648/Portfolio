@@ -66,4 +66,7 @@ $font_normal:defaultTheme.$font_normal;
 $font_small:defaultTheme.$font_small;
 
 $animation:defaultTheme.$slideshow_animation;
-$start-image: theme.$start-image
+$start-image: theme.$start-image;
+
+html, body {height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
