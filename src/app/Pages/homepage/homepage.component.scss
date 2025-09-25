@@ -1,0 +1,100 @@
+@use '../../../styles.scss' as theme;
+@import '../../../assets/styles/mats.scss';
+.wrapper {
+  background-color: #343434;
+
+  .container-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vw;
+    padding-top: 5vw;
+    padding-left: 10vw;
+    background-color: theme.$base_color;
+    gap: 0;
+    box-sizing: border-box;
+
+    .contactButton {
+      @include button_small
+    }
+
+    .container-left {
+      display: grid;
+      width: 40vw;
+      margin-top: 10vw;
+      row-gap: 0;
+      grid-template-rows: 15vw 10vw 10vw;
+
+      .titles {
+        padding: 0;
+        margin: 0;
+        color: theme.$base_lighter;
+      }
+
+      #Nike {
+        margin-right: 1vw;
+        font: normal normal 900 8.229vw/7.031vw Mosvita;
+        text-align: right;
+      }
+
+      #Roten {
+        margin-left: -1vw;
+        font: normal normal 900 14.583vw/1vw Mosvita;
+      }
+
+      #Portfolio {
+        margin-left: -0.7vw;
+        font: normal normal normal 5.208vw/0 Mosvita-Expanded;
+      }
+    }
+
+    .container-right {
+      display: flex;
+      align-items: end;
+
+      .image-nike {
+        
+
+        position: relative;
+        right: -6vw;
+        width: 50vw;
+        height: auto;
+      }
+  }
+  }
+
+  .container-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vw;
+    padding-top: 19vw;
+    box-sizing: border-box;
+
+    .works-title {
+     @include page_title1
+    }
+
+    .items-carousel {
+      display: flex;
+      gap: 1.6vw;
+
+      .work-items {
+        display: inline-flex;
+        width: 27.917vw;
+        height: 17.031vw;
+        margin-top: 5vw;
+        border-radius: 2.5vw;
+        background-color: white;
+        animation:theme.$animation ;
+      }
+    }
+
+    button {
+    @include button_page
+    }
+    
+  }
+
+}

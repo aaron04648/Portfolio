@@ -1,0 +1,112 @@
+@use '../../../styles.scss' as theme;
+.wrapper {
+  height: 45vw;
+  padding: 8.49vw 0 3.646vw 7.292vw;
+  border-radius: 200px 0 0 0;
+  background-color: #505050;
+  .footer-title {
+    color: white;
+    font-family: Mosvita;
+    font-size: 2.604vw;
+  }
+  .container-reference {
+    display: flex;
+    gap: 1.927vw;
+  }
+  .reference {
+    display: flex;
+    align-items: center;
+    width: 27.188vw;
+    margin-top: 1.042vw;
+    .reference-information {
+      display: grid;
+      min-width: 23.438vw;
+      height: 9.948vw;
+      padding: 1.302vw;
+      border-radius: 25px;
+      background-color: #343434;
+      z-index: 0;
+      box-sizing: border-box;
+      grid-template-rows: 2.188vw 1.302vw 2.448vw;
+      .information-name {
+        color: white;
+        font-family: Mosvita-SemiBold;
+        font-size: theme.$font_big;
+        .lastname {
+          color: #ff0000;
+        }
+      }
+      .description {
+        color: white;
+        font-family: Mosvita-Regular;
+        font-size: theme.$font_small;
+      }
+      .reference-contact {
+        display: flex;
+        margin-top: 0.885vw;
+        color: white;
+        gap: 1.302vw;
+        .contacts {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.448vw;
+          height: 2.448vw;
+          border: solid #ff0000 2px;
+          border-radius: 50%;
+          font-size: 1vw;
+        }
+      }
+    }
+    .picture-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      right: 8.802vw;
+
+      min-width: 12.552vw;
+      height: 12.552vw;
+      border-radius: 50%;
+      background-color: #343434;
+      z-index: 1;
+      box-sizing: border-box;
+      img {
+        width: 11.146vw;
+        height: 11.146vw;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+  .container-contact {
+    margin-top: 8.021vw;
+    .reference-information {
+      min-width: 27.552vw;
+    }
+    .picture-container {
+      right: 5.755vw;
+    }
+  }
+}
+.footer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 2.083vw;
+  padding: 0.417vw 7.292vw 0.417vw 7.292vw;
+  color: white;
+  background-color: #600000;
+  font-family: Mosvita-Regular;
+  font-size: 0.938vw;
+  box-sizing: border-box;
+  .name {
+    color: #ff0000;
+    font-family: Mosvita;
+  }
+  .footer-routerLinks {
+    display: flex;
+    gap: 5.208vw;
+  }
+}

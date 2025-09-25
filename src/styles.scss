@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@use './assets/themes/aaron_theme.scss' as theme;
+@use './assets/themes/default_theme.scss' as defaultTheme;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Mosvita-Regular;
+  
+}
+body {
+  overflow: overlay;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+@font-face {
+  font-family: Mosvita;
+  src: url(./assets/fonts/Mosvita-BlackExpanded.otf);
+}
+@font-face {
+  font-family: Mosvita-SemiBold-Expanded;
+  src: url(./assets/fonts/Mosvita-SemiBoldExpanded.otf);
+}
+@font-face {
+  font-family: Mosvita-SemiBold;
+  src: url(./assets/fonts/Mosvita-SemiBold.otf);
+}
+@font-face {
+  font-family: Mosvita-Expanded;
+  src: url(./assets/fonts/Mosvita-Expanded.otf);
+}
+@font-face {
+  font-family: Mosvita-Regular;
+  src: url(./assets/fonts/Mosvita-Regular.otf);
+}
+@font-face {
+  font-family: Mosvita-Medium;
+  src: url(./assets/fonts/Mosvita-Medium.otf);
+}
+
+
+
+$base_color: theme.$base_color;
+$base_lighter:theme.$base_lighter;
+$second_color:theme.$second_color;
+
+$font_title1:theme.$font_title1;
+$font_title2:theme.$font_title2;
+$font_title3:theme.$font_title3;
+
+$font_h1_size:defaultTheme.$font_h1_size;
+$font_h1_color:defaultTheme.$font_h1_color;
+$font_h1_family:defaultTheme.$font_h1_family;
+
+$font_big:defaultTheme.$font_big;
+$font_normal:defaultTheme.$font_normal;
+$font_small:defaultTheme.$font_small;
+
+$animation:defaultTheme.$slideshow_animation;
+$start-image: theme.$start-image;
+
+html, body {height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
