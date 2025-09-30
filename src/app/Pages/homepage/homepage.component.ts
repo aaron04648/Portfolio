@@ -26,10 +26,11 @@ export class HomepageComponent {
     '../../../assets/img/prints/rollup_sodalis.jpg',
     '../../../assets/img/prints/VK_pfammatter.jpg',
   ];
+  showMobileView: boolean = false;
   constructor() {
     this.images = [...this.images, ...this.images];
   }
-  ngOnInit(){
-   
+  ngOnInit() {
+    if (window.innerWidth >= 500) this.showMobileView = true;
   }
 }

@@ -1,27 +1,30 @@
 <div class="wrapper">
-  <img src="../../../assets/img/logo_red_rot.svg" alt="" />
-  <div class="container">
+  <div class="container" *ngIf="showMobileView">
     <div
       routerLink="/"
       class="routerLinks"
-      [ngStyle]="{ color: page == '/' ? 'red' : 'white' }"
+      [ngStyle]="{ color: page == '/' ? '#609bdd' : 'white' }"
     >
       home
     </div>
     <div
       routerLink="/myWorks"
       class="routerLinks"
-      [ngStyle]="{ color: page == '/myWorks' ? 'red' : 'white' }"
+      [ngStyle]="{ color: page == '/myWorks' ? '#609bdd' : 'white' }"
     >
       my works
     </div>
     <div
       routerLink="/aboutMe"
       class="routerLinks"
-      [ngStyle]="{ color: page == '/aboutMe' ? 'red' : 'white' }"
+      [ngStyle]="{ color: page == '/aboutMe' ? '#609bdd' : 'white' }"
     >
       about me
     </div>
   </div>
-  <div></div>
+  <div class="mobile">
+    <div *ngIf="!showMobileView">
+      <mat-icon routerLink="/navigator">menu</mat-icon>
+    </div>
+  </div>
 </div>
