@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <img src="../../../assets/img/logo_red_rot.svg" alt="" />
+  <div class="container">
+    <div
+      routerLink="/"
+      class="routerLinks"
+      [ngStyle]="{ color: page == '/' ? 'red' : 'white' }"
+    >
+      home
+    </div>
+    <div
+      routerLink="/myWorks"
+      class="routerLinks"
+      [ngStyle]="{ color: page == '/myWorks' ? 'red' : 'white' }"
+    >
+      my works
+    </div>
+    <div
+      routerLink="/aboutMe"
+      class="routerLinks"
+      [ngStyle]="{ color: page == '/aboutMe' ? 'red' : 'white' }"
+    >
+      about me
+    </div>
+    <div
+      routerLink="/skills"
+      class="routerLinks"
+      [ngStyle]="{ color: page == '/skills' ? 'red' : 'white' }"
+    >
+      skills
+    </div>
+  </div>
+  <div></div>
+</div>

@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="container-title">
+    <div class="container-left">
+      <span class="titles" id="Nike">NIKE</span>
+      <span class="titles" id="Roten">ROTEN</span>
+      <span class="titles" id="Portfolio">PORTFOLIO</span>
+    </div>
+    <div class="container-right">
+      <img
+        src="../../../assets/img/bild_nike.png"
+        class="image-nike"
+        alt="Picture of Nike"
+      />
+    </div>
+
+    <button routerLink="/contact" class="contactButton">MAIL ME</button>
+  </div>
+
+  <div class="container-works">
+    <div class="works-title">ARBEITEN</div>
+    <div class="slider"></div>
+    <div class="items-carousel">
+      <img
+        *ngFor="let image of images"
+        [src]="image"
+        alt="Arbeiten"
+        class="work-items"
+      />
+    </div>
+    <button routerLink="/myWorks">+ mehr</button>
+  </div>
+  <app-footer></app-footer>
+</div>

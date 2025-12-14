@@ -1,0 +1,180 @@
+.wrapper {
+  background-color: #600000;
+  .technologies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    border-radius: 0 0 200px 0;
+    background-color: #343434;
+    gap: 48px;
+    .technology-carousel {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      img {
+        width: 5.758vw;
+        height: 5.758vw;
+        transition: transform 1s, opacity 1s;
+        opacity: 0;
+      }
+      img.left {
+        z-index: 1;
+        transform: translateX(-20%);
+        opacity: 0.5;
+      }
+
+      img.center {
+        z-index: 2;
+        transform: translateX(0) scale(1.64);
+        opacity: 1;
+      }
+
+      img.right {
+        z-index: 1;
+        transform: translateX(20%);
+        opacity: 0.5;
+      }
+    }
+    .information {
+      text-align: center;
+      p {
+        color: #ffffff;
+        font: normal normal normal 50px/60px Mosvita-Regular;
+        letter-spacing: 1.25px;
+      }
+      .information-highlighted {
+        font: normal normal 900 100px/86px Mosvita;
+        letter-spacing: 0;
+        span {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+  .skills {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    color: white;
+    gap: 12px;
+    .skill {
+      width: 40vw;
+      height: fit-content;
+      padding: 60px 40px;
+      margin-top: -133px;
+      border-radius: 0 50px 50px 50px;
+      background-color: #460101;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .job {
+      width: 45vw;
+      height: fit-content;
+      padding: 60px 40px;
+      margin-bottom: -133px;
+      border-radius: 50px 0 50px 50px;
+      background-color: #460101;
+      text-align: center;
+      align-self: flex-end;
+      box-sizing: border-box;
+    }
+    .title {
+      margin-bottom: 40px;
+      color: #ff0000;
+      font: normal normal 900 100px/86px Mosvita;
+      letter-spacing: 0;
+    }
+  }
+  .costumer-impressions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150vh;
+    padding: 140px;
+    border-radius: 200px 0;
+    background-color: #343434;
+    gap: 130px;
+    p {
+      width: 950px;
+      color: white;
+      font: normal normal 900 120px/130px Mosvita;
+    }
+    .customer-carousel {
+      display: flex;
+      width: 100%;
+      height: 370px;
+      gap: 90px;
+    }
+    app-customer-layout {
+      display: inline-flex;
+      animation: scrollLeft 110s linear infinite;
+    }
+    @keyframes scrollLeft {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 33vh 0 33vh 0;
+    .title {
+      color: #ff0000;
+      font: normal normal 900 100px/86px Mosvita;
+    }
+    .image-carousel {
+      display: flex;
+
+      gap: 30px;
+      img {
+        width: 536px;
+        height: 451px;
+        margin-top: 136px;
+        border-radius: 25px;
+      }
+    }
+    .aboutNike {
+      display: grid;
+      padding: 16px;
+      margin: 0 100px 0 100px;
+      box-sizing: border-box;
+      grid-template-columns: 50% 50%;
+      p {
+        margin-top: 20vh;
+        color: white;
+        font: normal normal normal 20px/25px Mosvita-Regular;
+      }
+    }
+  }
+}
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1000%);
+  }
+}
+.image-carousel {
+  display: flex;
+  gap: 1.6vw;
+
+  .nike-items {
+    display: inline-flex;
+    width: 27.917vw;
+    height: 17.031vw;
+    margin-top: 5vw;
+    border-radius: 2.5vw;
+    background-color: white;
+    animation: scrollLeft 80s linear infinite;
+  }
+}

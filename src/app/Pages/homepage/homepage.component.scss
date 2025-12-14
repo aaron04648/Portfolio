@@ -1,0 +1,130 @@
+.wrapper {
+  background-color: #343434;
+
+  .container-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vw;
+    padding-top: 5vw;
+    padding-left: 10vw;
+    background-color: #600000;
+    gap: 0;
+    box-sizing: border-box;
+
+    .contactButton {
+      position: fixed;
+      top: 44.271vw;
+      right: 5.208vw;
+      bottom: 5vw;
+      width: 7.551vw;
+      height: 2.5vw;
+      border: none;
+      border-radius: 24px 24px 0 24px;
+      color: white;
+      background-color: #ff0000;
+      font-family: Mosvita;
+      font-size: 1.01vw;
+      z-index: 1000;
+      white-space: nowrap;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .container-left {
+      display: grid;
+      width: 40vw;
+      margin-top: 10vw;
+      row-gap: 0;
+      grid-template-rows: 15vw 10vw 10vw;
+
+      .titles {
+        padding: 0;
+        margin: 0;
+        color: #ff0000;
+      }
+
+      #Nike {
+        margin-right: 1vw;
+        font: normal normal 900 8.229vw/7.031vw Mosvita;
+        text-align: right;
+      }
+
+      #Roten {
+        margin-left: -1vw;
+        font: normal normal 900 14.583vw/1vw Mosvita;
+      }
+
+      #Portfolio {
+        margin-left: -0.7vw;
+        font: normal normal normal 5.208vw/0 Mosvita-Expanded;
+      }
+    }
+
+    .container-right {
+      display: flex;
+      align-items: end;
+
+      .image-nike {
+        position: relative;
+        right: -6vw;
+        width: 50vw;
+        height: auto;
+      }
+    }
+  }
+
+  .container-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vw;
+    padding-top: 19vw;
+    box-sizing: border-box;
+
+    .works-title {
+      color: white;
+      font-family: Mosvita;
+      font-size: 5.208vw;
+    }
+
+    .items-carousel {
+      display: flex;
+      gap: 1.6vw;
+
+      .work-items {
+        display: inline-flex;
+        width: 27.917vw;
+        height: 17.031vw;
+        margin-top: 5vw;
+        border-radius: 2.5vw;
+        background-color: white;
+        animation: scrollLeft 80s linear infinite;
+      }
+    }
+
+    button {
+      width: 28.021vw;
+      height: 3vw;
+      margin-top: 10vw;
+      border: 4px solid #ff0000;
+      border-radius: 0 2.4vw 2.4vw 2.4vw;
+      color: white;
+      background-color: transparent;
+      font-family: Mosvita-SemiBold-Expanded;
+      font-size: 1.5vw;
+    }
+    button:hover {
+      background-color: #ff0000;
+    }
+  }
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1000%);
+    }
+  }
+}
